@@ -75,19 +75,19 @@ cd etc/hadoop
 </configuration>
 ```
 ## 2.5 vim slaves
-slave1
-slave2
+slave1  <br>
+slave2 <br>
 
 ## 2.6 设置环境变量
-vim /etc/profile
-export HADOOP_HOME=/data/hdp/hadoop/hadoop-2.7.7
-export HADOOP_INSTALL=$HADOOP_HOME
-export HADOOP_MAPRED_HOME=$HADOOP_HOME
-export HADOOP_COMMON_HOME=$HADOOP_HOME
-export HADOOP_HDFS_HOME=$HADOOP_HOME
-export YARN_HOME=$HADOOP_HOME
-export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native
-export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin
+vim /etc/profile <br>
+export HADOOP_HOME=/data/hdp/hadoop/hadoop-2.7.7 <br>
+export HADOOP_INSTALL=$HADOOP_HOME <br>
+export HADOOP_MAPRED_HOME=$HADOOP_HOME <br>
+export HADOOP_COMMON_HOME=$HADOOP_HOME <br>
+export HADOOP_HDFS_HOME=$HADOOP_HOME <br>
+export YARN_HOME=$HADOOP_HOME <br>
+export HADOOP_COMMON_LIB_NATIVE_DIR=$HADOOP_HOME/lib/native <br>
+export PATH=$PATH:$HADOOP_HOME/sbin:$HADOOP_HOME/bin <br>
 
 
 ## 2.7 完成1-6配置,将hadoop-2.7.7文件夹和/etc/profile文件分发至slave1和slave2，source /etc/profile
@@ -97,5 +97,5 @@ hadoop namenode -format
 
 # 四. 启动hadoop集群
 sbin/start-all.sh
-如果提示找不到JAVA_HOME,需要在hadoop-env.sh等文件下添加设置JAVA_HOME
+如果提示找不到JAVA_HOME，则需要在hadoop-env.sh等文件下添加设置JAVA_HOME
 
